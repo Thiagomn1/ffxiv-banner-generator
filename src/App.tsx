@@ -30,7 +30,6 @@ export default function App() {
       if (!res.ok) throw new Error("Failed to fetch character data.");
 
       const data = await res.json();
-      console.log("Search results:", data);
       setResults(data.List || []);
     } catch (err) {
       console.error("Error fetching character:", err);

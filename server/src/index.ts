@@ -15,7 +15,6 @@ app.get("/api/character/:name", async (req, res) => {
   try {
     const { name } = req.params;
 
-    // Nodestone expects `req.query.name`
     const character = await parser.parse({
       query: { name },
     } as any);
